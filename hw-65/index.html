@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script type="application/javascript">
+    alert('Первое задание')
+    massiv =  ['молоко', 'пиво', 'пиво', 'молоко', 'молоко']
+    for (let i = 0; i < massiv.length; i++){
+        if (massiv[i] === 'молоко')
+        {
+            console.log('хорошо');
+        }
+        else
+            console.log('плохо');
+
+    }
+</script>
+
+<script type="application/javascript">
+    alert('Второе задание')
+    a = [1, 5, 12, 4, 3]
+    b = [2, 3, 4, 5, 6, 7, 8, 9, 10]
+    c = [3, 10, 17]
+    
+    function calc(array) {
+        sum = 0;
+        for (let i = 0; i<array.length;i++)
+        {
+            sum += array[i];
+        }
+        console.log(sum/array.length)
+    }
+    calc(a);
+    calc(b);
+    calc(c);
+</script>
+
+<script type="application/javascript">
+    answer = prompt('Третье задание. Отгадайте загадку: У квадратного стола отпилили один угол. Сколько теперь углов у него стало?')
+    console.log(answer)
+    if (answer==='5')
+    {
+        alert('Ответ верный!');
+    }
+    else
+        alert('Ответ неверный!');
+</script>
+
+<script type="application/javascript">
+    alert('Четвертое задание.');
+    let duck = {
+        name : 'Дональд',
+        color : 'белый',
+        old : 1,
+        toStr: function () {
+            console.log(`${this.name}, ${this.color}, ${this.old} год.`)
+        },
+        say: function () {
+            console.log('кря кря')
+        }
+    };
+    duck.toStr();
+    duck.say();
+</script>
+</body>
+</html>
