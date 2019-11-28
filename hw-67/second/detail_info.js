@@ -6,11 +6,12 @@ function renderData(data) {
     data = [data];
     for(let i = 0; i <data.length;i++){
         let new_el = `<h5 class="card-title text-center" style="font-size: 24px">${data[i].name}</h5>
+                      <p class="text-center"><a href="${data[i].flag}"> <img alt="Qries" src="${data[i].flag}" style="max-width: 1068px"> </a></p>
                       <p class="card-text">
-                      <p>Столица : ${data[i].capital}.</p>
-                      <p>Регион : ${data[i].region}.</p>
-                      <p>Численность населения : ${data[i].population} человек.</p>
-                      <p>Площадь : ${data[i].area} кв.м.</p>
+                      <p class="text-center">Столица : ${data[i].capital}.</p>
+                      <p class="text-center">Регион : ${data[i].region}.</p>
+                      <p class="text-center">Численность населения : ${data[i].population} человек.</p>
+                      <p class="text-center">Площадь : ${data[i].area} кв.м.</p>                
                       </p>`;
         card_body.append(new_el);
         for (let temp=0; temp < data[i].borders.length; temp++)
@@ -18,7 +19,7 @@ function renderData(data) {
             border_new = `<a href="country.html?alpha=${data[i].borders[temp]}" class="btn btn-info mr-2"> ${data[i].borders[temp]}</a>`;
             card_footer.append(border_new)
         }
-        card_footer.append('<p class="text-center"><a href="index.html" class="btn btn-success">Cписок стран</a> </p>')
+        card_footer.append('<p class="text-center mt-3"><a href="index.html" class="btn btn-success">Cписок стран</a> </p>')
     }
 }
 
